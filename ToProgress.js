@@ -40,7 +40,8 @@
       id: 'top-progress-bar',
       color: '#F44336',
       height: '2px',
-      duration: 0.2
+      duration: 0.2,
+      selector: selector
     };
     if (opt && typeof opt === 'object') {
       for (var key in opt) {
