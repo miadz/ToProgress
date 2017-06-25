@@ -105,7 +105,7 @@
     }
     this.transit();
     //pass progressbar to callback
-    callback && callback(this.progress);
+    callback && callback(this);
   }
 
   ToProgress.prototype.increase = function(toBeIncreasedProgress, callback) {
@@ -132,7 +132,7 @@
   ToProgress.prototype.reset = function(callback) {
     this.progress = 0;
     this.transit();
-       callback && callback(this.progress);
+       callback && callback(this);
 
   }
 
