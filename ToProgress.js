@@ -97,13 +97,15 @@
     this.show();
     if (progress > 100) {
       this.progress = 100;
+      
     } else if (progress < 0) {
       this.progress = 0;
     } else {
       this.progress = progress;
     }
     this.transit();
-    callback && callback();
+    //pass progressbar to callback
+    callback && callback(this.progress);
   }
 
   ToProgress.prototype.increase = function(toBeIncreasedProgress, callback) {
@@ -130,7 +132,8 @@
   ToProgress.prototype.reset = function(callback) {
     this.progress = 0;
     this.transit();
-    callback && callback();
+       callback && callback(this.progress);
+
   }
 
   ToProgress.prototype.hide = function() {
